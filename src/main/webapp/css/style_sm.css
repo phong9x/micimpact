@@ -1,0 +1,62 @@
+@CHARSET "UTF-8";
+/* 회원가입
+-------------------------------------------------------------------- */
+.join-card{width: 500px; margin: 0 auto; position: relative; margin-top:50px; margin-bottom: 50px;}
+.row_group.lat{border-bottom: 0px;}
+.ps_box{display: block;}
+.ps_box button{width: 100px; height: 43px; float: right;}
+.ps_box img{float: right; width: 20px; height: 26px;}
+.err_msg{padding: 0 0 5px 0; color: #f00; height: 20px;}
+.join-card input[type=text], input[type=password]{width: 100%;}
+.join-card input[id=not_users_username]{width: 75%;}
+#btn_join{font-size: 16px;}
+
+
+.navbar-collapse ul ul.lang_list
+{
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+	background:#fff;
+	padding:0
+}
+
+.navbar-collapse ul li:hover > ul
+{
+	display:block
+}
+
+.navbar-collapse ul ul.lang_list li
+{
+	float:none;
+	width:130px;
+}
+
+.navbar-collapse ul ul.lang_list li a
+{
+	display: block;
+	background: #fff;
+	text-align: right;
+	border: 1px solid #c9c9c9;
+	border-bottom: 0px;
+	padding: 10px 0;
+  	font-size: 15px;
+}
+
+.navbar-collapse ul ul.lang_list li a.lst{
+	border-bottom: 1px solid #c9c9c9;
+}
+
+.navbar-collapse ul ul.lang_list li img{
+	float:left;
+	width: 30px;
+	height: 20px; 
+	margin-left: 5px;
+}
+
+.navbar-collapse ul ul li .lang{
+	display: inline-block; 
+	margin-right: 5px;
+}
+

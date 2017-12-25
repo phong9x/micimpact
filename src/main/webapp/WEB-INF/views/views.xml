@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+  <definition name="user_main" extends="user_layout">
+    <put-attribute name="body" value="/WEB-INF/views/main_user.jsp" />
+  </definition>
+  <definition name="admin_main" extends="admin_layout">
+    <put-attribute name="body" value="/WEB-INF/views/main_admin.jsp" />
+  </definition>
+  <definition name="res_manager_main" extends="res_manager_layout">
+    <put-attribute name="body" value="/WEB-INF/views/main_res.jsp" />
+  </definition>
+
+
+  <definition name="dataAccessFailure" extends="default">
+    <put-attribute name="body" value="/WEB-INF/views/dataAccessFailure.jsp" />
+  </definition>
+
+  <definition name="resourceNotFound" extends="default">
+    <put-attribute name="body" value="/WEB-INF/views/resourceNotFound.jsp" />
+  </definition>
+
+  <definition name="uncaughtException" extends="default">
+    <put-attribute name="body" value="/WEB-INF/views/uncaughtException.jsp" />
+  </definition>
+  
+  <definition name="posa_admin_main" extends="posa_admin_layout">
+    <put-attribute name="body" value="/WEB-INF/views/posa_main_admin.jsp" />
+  </definition>
+
+</tiles-definitions>

@@ -1,0 +1,121 @@
+extends layouts/master.jade
+
+append content
+  .logo
+    .container.text-center
+      img(src="/dist/assets/images/logo.png" alt="logo")
+
+  .section2
+    .container.text-center
+      .f30.c-gray 나를 채워주는 놀라운 강연들
+      .f30.mb50 #[b 마이크임팩트tv 앱]에서 더 만나보세요
+      div
+        button(type="button").f30.btn-1: b 앱으로 보기
+
+  .mi-swiper-slide
+    .swiper-container
+      .swiper-wrapper
+        img.swiper-slide(src="/dist/assets/images/player.png", alt="")
+        img.swiper-slide(src="/dist/assets/images/player.png", alt="")
+        img.swiper-slide(src="/dist/assets/images/player.png", alt="")
+      .swiper-pagination.swiper-pagination-white
+  // .mi-swiper-slide
+
+
+  .mi-video-js
+    video#example-video.video-js.vjs-default-skin(width='720', height='420', controls='')
+      source(src='//s3.amazonaws.com/_bc_dml/example-content/tears-of-steel/playlist.m3u8', type='application/x-mpegURL')
+      //- source(src='https://d3i0w6mgohqrwj.cloudfront.net/stream_output/8c3c8040-eade-4e39-9e2f-6a2e2902e3b9/fb845bf19875f6e6ea5e95f63b458c4599eb3681e0672617db8941b3b75ea8ee.m3u8', type='application/x-mpegURL')
+      //- source(src='http://s3.amazonaws.com/_bc_dml/example-content/tears-of-steel/playlist.m3u8', type='application/x-mpegURL')
+  // .mi-video-js
+
+  .mi-video-js
+    video#vid1.video-js.vjs-default-skin(controls='', width='720', height='420', data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=_2jRVKqYuVs"}] }')
+  // .mi-video-js
+
+  .video
+    img(src="/dist/assets/images/player.png", alt="")
+
+  .info
+    .container
+      .row.nopad
+        .col-xs
+          .f30.mb40 늦었다고 생각할때는 정말 늦었다
+          .f24 
+            span.mr28 BY 박명수
+            span.mr28.c-gray |
+            span.mr28.c-gray ►  1,590
+            span.mr28.c-gray |
+            span.c-gray 2015.11.15
+        .w22.pt38: img(src="/dist/assets/images/up.png", alt="up")
+
+  .info2
+    .container
+      .f24.c-gray
+        | 들여다본다고 마냥 떨쳐질 외로움은 아니지만 #[br]
+        | 외로움이 괴로움으로 되지는 않았으면 하기에, #[br] 
+        | 불 꺼둔 방 안에서 외로움을 찬찬히 살펴본다.
+
+  .info3
+    .container
+      span.mr40.f24.c-gray # 위로를받고싶은그대에게
+      span.f24.c-gray # 위로를받고싶은그대에게
+
+  .gap
+
+  .section3
+    .container
+      .f26 댓글
+
+  .section4
+    .container
+      .row.nopad
+        .col-xs
+          .mb16
+            button.btn-2.mr12 BEST
+            span.f24 홍길동
+          .mb26
+            | 정말 유익하고 재미있어요! #[br]
+            | 항상 감사하게 보고 있답니다.
+
+          .f24
+            img.mr14(src="/dist/assets/images/heart2.png", alt="")
+            span 1037
+        .w190
+          .f20.c-gray.text-right.mb26 2015.09.21  18:17
+          .f24.c-gray.text-right 신고
+  
+  .gap
+
+  .section5
+    .container
+      .f26.mb30 추천 영상
+      .row.nopad
+        .col-xs.mr30
+          .thumb.mb20(style="background-image: url(/dist/assets/images/clip.png)")
+            img(src="/dist/assets/images/play.png", alt="play")
+          .f26.mb38 해보고 싶다고 생각해 볼만한 디자인
+          .f22.c-gray 김기조  |  타이포그래피디자이너 
+        .col-xs
+          .thumb.mb20(style="background-image: url(/dist/assets/images/clip.png)")
+            img(src="/dist/assets/images/play.png", alt="play")
+          .f26.mb38 Visual Thinking으로 하는 생각정리 기술
+          .f22.c-gray 김기조  |  타이포그래피디자이너 
+
+  .section6
+    .container
+      .row.nopad
+        .col-xs.mr30
+          .f22.c-gray
+            img(src="/dist/assets/images/heart3.png", alt="").mr10
+            span.mr56 103
+            img(src="/dist/assets/images/ex2.png", alt="").mr10
+            span.mr56 207
+        .col-xs
+          .f22.c-gray
+            img(src="/dist/assets/images/heart3.png", alt="").mr10
+            span.mr56 103
+            img(src="/dist/assets/images/ex2.png", alt="").mr10
+            span.mr56 207
+
+  .gap

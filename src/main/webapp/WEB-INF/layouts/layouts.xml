@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<definition name="default" template="/WEB-INF/layouts/default.jsp">
+	</definition>
+	<definition name="user_layout" template="/WEB-INF/layouts/user_layout.jsp">
+	</definition>
+	<definition name="admin_layout" template="/WEB-INF/layouts/admin_layout.jsp">
+	</definition>
+	
+	<definition name="mobile_layout" template="/WEB-INF/layouts/mobile_layout.jsp">
+	</definition>
+	
+	<definition name="video_layout" template="/WEB-INF/layouts/video_layout.jsp">
+	</definition>
+	
+	<definition name="res_manager_layout" template="/WEB-INF/layouts/res_manager_layout.jsp">
+	</definition>
+	<definition name="popup_layout" template="/WEB-INF/layouts/popup_layout.jsp">
+	</definition>
+	<definition name="not_nav_layout" template="/WEB-INF/layouts/not_navbar_layout.jsp">
+	</definition>
+	<definition name="posa_admin_layout" template="/WEB-INF/layouts/posa_admin_layout.jsp">
+	</definition>
+	<definition name="posa_user_layout" template="/WEB-INF/layouts/posa_user_layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/tiles-layout/header_user.jsp" />
+		<put-attribute name="footer"  value="/WEB-INF/tiles-layout/footer.jsp" />
+	</definition>
+	
+	<definition name="*.tiles" extends="admin_layout">
+		<put-attribute name="body" value="/WEB-INF/views/{1}.jsp" />
+	</definition>
+	
+	<definition name="*/*.tiles" extends="admin_layout">
+		<put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition>
+	
+	<definition name="*/*/*.tiles" extends="admin_layout">
+		<put-attribute name="body" value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
+	</definition>
+    
+</tiles-definitions>

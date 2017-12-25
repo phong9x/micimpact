@@ -1,0 +1,254 @@
+*{padding: 0; margin: 0;}
+a{color: #584444}
+ul li{list-style: none;}
+
+fieldset{padding: 0; margin: 0; border: 0;}
+
+.entity li {
+	margin: 5px;
+	font-size: 1.2em;
+}
+.entity li a {
+	display: block;
+	width: 200px;
+	height: 30px;
+}
+.entity li a:hover {
+	color: #cc4444;
+}
+.languages {
+	float: right;
+}
+.logo {
+	background: url("../images/logo.png") 0 5px no-repeat;
+	padding-left: 97px;
+}
+.hide{display:none;}
+/*paging*/
+.paging {overflow:hidden;width:100%;text-align:center;}
+/* layout */
+.wrap{margin-top:100px;}
+.btn-container{	text-align: right; margin-bottom: 20px;}
+.file{margin: 8px 0 8px 0;}
+/* Admin User*/
+.user_form_box{margin-top: 100px;}
+.user_form_box table{width: 100%;}
+.user_form_box table tr{height: 44px;}
+.user_form_box table th{text-align: center;}
+.user_form_box table td{text-indent: 20px;}
+.user_form_box table input[type='text'], .user_form_box table input[type='password']{width: 90%;}
+.user_form_box .form-group{margin-top: 20px;}
+
+
+.table, .table th{ text-align:center;}
+.re_mark{width:10px;height:10px;border-bottom: 1px solid black;	border-left: 1px solid black;vertical-align:top;float: left;margin: 0 2px 0 2px;}
+ table .title{text-align:left;}
+ 
+ /* �쉶�썝媛��엯 �빟愿�
+-------------------------------------------------------------------- */
+.wrap_menber{width: 960px; margin: 0 auto;}
+.clause_scroll{  
+	overflow: scroll;
+	display: block;
+	width: 917px;
+	height: 160px;
+	padding: 10px;
+	margin: 10px;
+	overflow-x: hidden;
+	border: 1px solid #ececed;
+}
+.clause_contents{color: #949393;}
+	{width: 100%; height: 300px; background-color: #fff; margin-bottom: 20px;}
+.clause_box .title{font-size: 20px; padding: 15px 0 16px 20px; border-bottom: 3px solid #ececed; }
+.title_join{
+	width: 98%;
+	background: #fff;
+	border-bottom: 3px solid #ececed;
+	font-size: 20px;
+	color: #949393;
+	padding: 15px 0 16px 20px;
+}
+.all_check_box{width: 100%; height: 50px; background-color: #fff; margin-bottom: 30px; text-align: center;}
+.clause_box input[type='checkbox'], .all_check_box input[type='checkbox']{width: 20px; height: 15px; margin: 0 5px 0 11px; display: inline-block; margin-top: 5px;}
+.all_check_box span{margin-top: 16px; display: inline-block; font-size: 14px;}
+ #btn_clause_true, #btn_clause_false{width: 30%; font-size: 20px; display: inline-block; padding: 10px 0; border: 1px solid #c9c9c9;}
+ #btn_clause_true{}
+ #btn_clause_false{}
+ .btn_gp button{width:100px; padding: 10px 0;}
+
+/* login
+-------------------------------------------------------------------- */
+.login-card, .search_user_box, .search_pass_box {
+  padding: 40px;
+  width: 400px;
+  background-color: #F7F7F7;
+  margin: 0 auto 10px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin-top: 200px;
+}
+
+.login-card h1 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 2.3em;
+}
+
+.login-card input[type=button] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+.login-card input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.login-card input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.login {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.login-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #4d90fe;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.login-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.login-card a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+}
+
+.login-card a:hover {
+  opacity: 1;
+}
+
+.login-help {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+}
+
+.btn_gp{text-align: center;}
+/* �븘�씠�뵒 鍮꾨�踰덊샇 李얘린
+-------------------------------------------------------------------- */
+.reserved_box{
+	width:460px;
+	margin : 0 auto;
+	margin-top: 100px;
+}
+.search_user_box, .search_pass_box{width: 600px;}
+.search_pass_box{margin-top: 10px;}
+.reserved_box ul li{float: left;}
+.reserved_box .at{font-size: 25px; margin: 0 5px;}
+.reserved_box .in_te{margin-left: 5px; width: 372px;}
+.reserved_box .btn_gp{float: right; padding-top: 10px}
+.reserved_box table th, .reserved_box table td{height: 40px;} 
+.search_user_box input[type=text], .search_pass_box input[type=text]{height: 30px; text-indent: 10px;}
+
+/* 검색박스
+-------------------------------------------------------------------- */
+.search_box{  width: auto; display: inline-block; float: right; position: relative; bottom: 20px;}
+.admin_user{width: 100%;}
+.admin_user .title{padding: 20px 0; border-bottom: 2px solid #c9c9c9; font-size: 25px; margin-bottom: 20px;}
+.search_box .col-lg-6{width: 300px; display: block;}
+.admin_user .col-lg-6{width: 800px;}
+.admin_user .row{display: inline-block;}
+.admin_user #sort_select{float: right;}
+.search_box select{  width: auto; display: inline-block;   float: left; margin-left: 30px;}
+.default-btn{width: 130px; padding: 10px 0; display: inline-block; background: #fff; border: 1px solid #c9c9c9;}
+.btn_cancel{margin-right: 38px;}
+
+
+/* admin 로그인 박스
+-------------------------------------------------------------------- */
+.login_admin{width: 500px; padding: 10px 40px 30px 40px;}
+.login_admin .row{display:inline-block; margin: 0; margin-bottom: 7px;}
+
+
+/* admin 메인 화면
+-------------------------------------------------------------------- */
+.main_box{
+	width: 700px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+.main_box > div{width: 100%; height: 40px; border-bottom: 1px solid #c9c9c9;}
+.main_box > div span{display: inline-block;}
+.main_box > div .left{float: left; border: 1px solid #c9c9c9; border-bottom: 0; padding: 10px 15px 8px 15px;}
+.main_box > div .right{float: right; padding: 10px 0 8px 0;}
+.main_box > div .right a{display: block;}
+.main_box table td{height: 40px; text-indent: 5px;}
+.main_box table tr td{text-align: right;}
+.main_box table tr td:first-child{text-align: left;}
+
+/* resource manager export button */
+.export {float:right; margin-bottom:20px;}
+.export img{width:20px; height:20px; margin-right:5px;}
+
+
+/* Recommend Card Start */
+.recommends{width: 1028px; margin: 0 auto; margin-top: 50px; margin-bottom: 40px;}
+.recommends .contents{width: 100%; display: inline-block;}
+#sortable { list-style-type: none; margin: 0; padding: 0; width:100% ; }
+#sortable li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 245px; height: 260px; background: #fff; }
+#sortable li #item{position: relative; display: block;}
+
+#sortable li #item .title_box{height: 30px; position: relative; font-size: 16px; margin: 5px 0;}
+#sortable li #item .title_box .title{
+	display: inline-block; padding:2px 0 5px 0; 
+	text-indent: 10px; max-width: 210px;
+	margin: 0; font-size: 18px;
+}
+#sortable li #item .title_box .rank{  position: absolute; right: 0px; font-size: 20px; padding: 2px 7px; border: 1px solid #cacaca;}
+#sortable li #item .img_main{width: 100%; height: 180px; margin-bottom: 5px; background-position:center center; background-repeat: no-repeat}
+#sortable li #item .btn_option{text-align: center;}
+
+.recommends .save_box {margin-bottom: 10px; position: relative;}
+.recommends .save_box .btn{position: absolute; right: 0px; padding: 4px 40px;}
+/* Recommend Card End */

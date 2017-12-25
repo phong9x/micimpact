@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration
+2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	<definition extends="admin_layout" name="users/list">
+		<put-attribute name="body" value="/WEB-INF/views/admin/users/users_list.jsp" />
+	</definition>
+
+	<definition extends="admin_layout" name="users/form">
+		<put-attribute name="body" value="/WEB-INF/views/admin/users/users_form.jsp" />
+	</definition>
+		
+	<definition extends="admin_layout" name="posa_users_show/body">
+		<put-attribute name="body" value="/WEB-INF/views/admin/users/users_show_form.jsp" />
+	</definition>	
+	
+	<definition extends="admin_layout" name="users/channel">
+		<put-attribute name="body" value="/WEB-INF/views/admin/users/channel_list.jsp" />
+	</definition>	
+	
+</tiles-definitions>

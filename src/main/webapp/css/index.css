@@ -1,0 +1,83 @@
+*{padding: 0; margin: 0; font-size: 13px;}
+a{color: #584444; text-decoration: none;}
+a:hover {text-decoration: none;}
+ul li{list-style: none;}
+dl, dt, dd {margin: 0;}
+
+fieldset{padding: 0; margin: 0; border: 0;}
+
+/* Header Start */
+#Header {width: 100%;}
+#Header .inner_top {background: white; height: 70px;}
+#Header .inner_bottom {background: #DB3A1A; height: 50px;}
+.center_root {margin: 0 auto; width: 900px;}
+
+#Header .inner_top .top_logo {float: left; margin-top: 23px;}
+#Header .inner_top ul {margin-top: 8px; float: right;}
+#Header .inner_top ul li {float: left; position: relative; display: block; padding: 15px;}
+#Header .inner_top ul li a {line-height: 20px; padding: 15px;}
+#Header .inner_top ul li select {border: 2px solid red;}
+
+#Header .inner_bottom ul {}
+#Header .inner_bottom ul li {float: left; position: relative; display: block; background: #C63417; padding-right: 1px;}
+#Header .inner_bottom ul li.first {padding-left: 1px;}
+#Header .inner_bottom ul li a {line-height: 20px; padding: 15px; color: white; width: 190px; text-align: center; display: inline-block; background: #DB3A1A;}
+#Header .inner_bottom ul li a:hover {background: #C63417;}
+
+/* Header End */
+
+/* Footer Start */
+#Footer {width: 100%;}
+#Footer .inner_top {height: 50px; background: #EFEFEF;}
+#Footer .inner_bottom {padding: 20px 0;}
+
+#Footer .inner_top ul {margin: 0px;}
+#Footer .inner_top ul li {float: left; position: relative; display: block;}
+#Footer .inner_top ul li a {padding: 15px; display: block; line-height: 20px;}
+#Footer .inner_top ul li a:hover {background: gray; color: white;}
+#Footer .inner_top select {border: 2px solid black; float: right; margin-top: 13px;}
+#Footer .inner_bottom .bottom_logo {float: left; margin-right: 20px;}
+
+/* Footer End */
+
+/* Main Container Start */
+.container {position: relative; min-height: 500px; margin: 0 auto; width: 900px; padding: 40px 0;}
+
+.first_row {position: relative; min-height: 300px;}
+.left_col {width: 280px;}
+.exchange_rate_root {float: left; width: 100%; text-align: center;}
+.exchange_rate_root .title {background: #37373D; text-align: center; padding: 10px; color: white;}
+.exchange_rate_root .contents {background: #F8F8F9; padding: 10px; min-height: 123px;}
+.clear {clear: both;}
+
+.link_button_root {float: left; width: 100%; color: white; margin-top: 10px;}
+.link_button_root .ems_tracking_button {float: left; width: 115px; background: #DB3A1A; padding: 10px; margin-right: 10px; min-height: 90px;}
+.link_button_root .charges_button {float: left; width: 115px; background: #606978; padding: 10px; min-height: 90px;}
+
+.right_col {float: right; width: 610px; height: 300px; background: skyblue;}
+
+.second_row {margin-top: 50px;}
+
+.third_row {margin-top: 50px;}
+.third_row h1 {float: left;}
+.third_row .slide_button {float: right; margin-left: 5px;} 
+.third_row li {float: left; margin-left: 5px;}
+.third_row li.first {margin-left: 0px;}
+.third_row .banner_root ul li img {width: 296px; height: 100px;}
+
+.fourth_row {margin-top: 50px;}
+.board_box {float: left; margin-right: 5px; border: 1px solid #C8CED4;}
+.board_box_title {background: #EFF1F3; border-bottom: 1px solid #C8CED4; padding: 5px 10px;;}
+.board_box_title .more {float: right;}
+.board_box_body {padding: 0 10px; height: 160px;}
+.board_box_body li {margin: 10px 0; width: 305px;}
+.board_box_body li .date {float: right;}
+
+.contact_box {float: right; background: #606978; height: 180px; color: white; padding: 10px; margin-left: 10px;}
+/* Main Container End */
+
+/* Quick Menu Start */
+#quick_menu {position: absolute; top: 40px; right: -100px; text-align: center; border: 1px solid #C8CED4;}
+#quick_menu .title {background: #F8F8F9;}
+#quick_menu .menus {border-top: 1px solid #C8CED4; padding: 15px 5px;}
+/* Quick Menu End */

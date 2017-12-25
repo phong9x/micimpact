@@ -1,0 +1,85 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/jdbc
+		http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/data/jpa
+		http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+		http://www.springframework.org/schema/util 
+		http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+
+	<jpa:repositories base-package="com.app.micimpact.data.repository" />
+
+	<tx:annotation-driven />
+	
+	<bean id="transactionManager"
+		class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory"/>
+	</bean>
+	
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="database" value="#{datasource['database.database']}"/>
+				<property name="databasePlatform" value="#{datasource['database.databasePlatform']}"/>
+				<property name="showSql" value="#{datasource['database.showSql']}"/>
+				<property name="generateDdl" value="#{datasource['database.generateDdl']}"/>
+			</bean>
+		</property>
+		<property name="packagesToScan" value="com.app.micimpact.bean"/>
+	</bean>
+	
+	<bean class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" id="dataSource">
+		<property name="driverClassName" value="#{datasource['database.driverClassName']}" />
+		<property name="url" value="#{datasource['database.url']}" />
+		<property name="username" value="#{datasource['database.username']}" />
+		<property name="password" value="#{datasource['database.password']}" />
+		<property name="testOnBorrow" value="true" />
+		<property name="testOnReturn" value="true" />
+		<property name="testWhileIdle" value="true" />
+		<property name="timeBetweenEvictionRunsMillis" value="1800000" />
+		<property name="numTestsPerEvictionRun" value="3" />
+		<property name="minEvictableIdleTimeMillis" value="1800000" />
+		<property name="initialSize" value="1" />
+		<property name="maxActive" value="50" />
+		<property name="maxIdle" value="20" />
+	</bean>
+	
+	<bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+		<property name="resourceLoaderPath" value="WEB-INF/velocity"/>
+	</bean>
+	
+	<bean id="amazonS3Client" class="com.app.micimpact.web.common.AmazonS3FileManager">
+		<constructor-arg name="bucketName" value="#{commonConfig['s3.bucket.name']}"/>
+		<constructor-arg name="accessKey" value="#{commonConfig['s3.bucket.access_key_id']}"/>
+		<constructor-arg name="secretKey" value="#{commonConfig['s3.bucket.secret_access_key']}"/>
+	</bean>
+	
+	<beans profile="dev">
+		<util:properties id="commonConfig" location="classpath:META-INF/config/common-config-dev.properties" />
+		<util:properties id="datasource" location="classpath:META-INF/config/datasource-dev.properties"/>
+	</beans>
+	
+	<beans profile="local">
+		<util:properties id="commonConfig" location="classpath:META-INF/config/common-config-local.properties" />
+		<util:properties id="datasource" location="classpath:META-INF/config/datasource-local.properties"/>
+	</beans>
+	
+	<beans profile="prod">
+		<util:properties id="commonConfig" location="classpath:META-INF/config/common-config-prod.properties" />
+		<util:properties id="datasource" location="classpath:META-INF/config/datasource-prod.properties"/>
+	</beans>
+</beans>

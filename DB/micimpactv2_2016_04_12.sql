@@ -1,0 +1,1 @@
+delete from card_tags,cards where card_tags.card_id = cards.id and cards.channel_id=1
